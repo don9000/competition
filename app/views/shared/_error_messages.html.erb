@@ -1,0 +1,12 @@
+<% if @userlist.errors.any? %>
+<div id="error_explanation">
+<div class="alert alert-danger">
+The form contains <%= pluralize(@userlist.errors.count, "error") %>.
+</div>
+<ul>
+	<% @userlist.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>

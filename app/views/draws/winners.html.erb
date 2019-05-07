@@ -1,0 +1,7 @@
+<h1 class="jumbotron"><%= "Winners For #{comp_name}" %></h1>
+
+<ul class="list-group">
+<% @winners.each do |individual| %>
+	<li class="list-group-item"><%= "#{individual[:order]}. #{individual[:winner]}"%></li>
+<% end %>
+</ul>

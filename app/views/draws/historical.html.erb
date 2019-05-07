@@ -1,0 +1,9 @@
+<h1 class="jumbotron"><%=@history.first[:competition]%></h1>
+<ul class="list-group">
+<% @history.each do |winners| %>
+
+<li class="list-group-item"> <%= " #{winners[:order]}. #{winners[:winner]}" %></li>
+
+
+<% end %>
+</ul>

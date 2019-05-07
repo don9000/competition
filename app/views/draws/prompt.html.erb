@@ -1,0 +1,10 @@
+<h1 class="jumbotron">Competition Draw</h1>
+
+<h2><%= "#{comp_name}"%></h2>
+<div>Please select the amount of users to draw</div>
+<%= form_tag("/draws/result", method: "get") do %>
+<%= select_tag "winners", options_for_select(@options) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+

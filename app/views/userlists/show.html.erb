@@ -1,0 +1,11 @@
+
+<h1 class="jumbotron">All Competition Draws</h1>
+
+<ul class="list-group">
+<% @history.reverse.each do |eachcomp| %>
+<li class="list-group-item text-capitalize"><%= link_to eachcomp[:competition], draws_historical_path(:competition => eachcomp[:competition]) %></li>
+<% end %>
+</ul>
+
+
+
